@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  
+  function add(){
+
+    
+document.getElementById('form1').style.display = '';
+  }
+
+</script>
+</head>
+<body>
+
+<div>
+
+<nav class="navbar navbar-expand-sm ">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="C:\Users\temp\Downloads\starbugs.png" alt="logo" style="width:60px;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav" style="padding-left: 680px">
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: #00ff00">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"style="color: #00ff00">About us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: #00ff00">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: #00ff00">Portfolio</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: #00ff00">
+        Branches
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">chicago</a>
+        <a class="dropdown-item" href="#">los angels</a>
+        <a class="dropdown-item" href="#">new york</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: #00ff00">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: #00ff00">Contact</a>
+    </li>
+    <a class="navbar-brand" href="#">
+    <img onclick="add()" src="C:\Users\temp\Downloads\lock.jpg" alt="logo" style="width:40px;">
+  </a>
+  </ul>
+</nav>
+
+
+
+
+
+
+<div  id = "form1" style = "display:none">
+  <div class="container">
+  <h2>Login</h2>
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-success">Login</button>
+  </form>
+</div>
+
+</div><br><br>
+
+
+
+
+
+
+<div class="container">
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="C:\Users\temp\Downloads\fm1.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption" style="padding-left: 20px">
+        <h3>Planning and analying</h3>
+        <p>python</p>
+        <button type="button" class="btn btn-primary">Learn More</button>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\temp\Downloads\fm2.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Planning and analying</h3>
+        <p>python</p>
+        <button type="button" class="btn btn-primary">Learn More</button>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\temp\Downloads\fm3.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+         <h3>Planning and analying</h3>
+        <p>python</p>
+        <button type="button" class="btn btn-primary">Learn More</button>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+<div>
+  
+  <div style="display: inline-block;">
+     <br><br>
+    <h5>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</h5>
+    <p style="font-size: 14px">Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet</p>
+    
+  </div>
+  <div style="display: inline-block;">
+    <div style="padding-left: 300px">
+     <button type="button" class="btn btn-success">Learn More</button>
+   </div>
+  </div>
+</div><br><br>
+
+
+<div style="background-color: #1a1a1a"><br><br>
+  <h3 style="padding-left: 500px; color:white">what we offer</h3><br>
+  <p style="color:white;padding-left: 350px">Look at some of the recent projects we have completed for our valuble clients</p>
+  <div class="container">
+  <div class="card-columns">
+    <div class="card ">
+      <div class="card-body " style="background-color: #1a1a1a">
+        <img style="width: 20px" src="C:\Users\temp\Downloads\starbugs.png">
+        <h5 style="color:white">web design</h5>
+        <p style="color:white">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+    </div>
+    <div class="card ">
+      <div class="card-body" style="background-color: #1a1a1a">
+        <img style="width: 20px" src="C:\Users\temp\Downloads\starbugs.png">
+        <h5 style="color:white">web design</h5>
+        <p style="color:white">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+    </div>
+    <div class="card ">
+      <div class="card-body " style="background-color: #1a1a1a">
+        <img style="width: 20px" src="C:\Users\temp\Downloads\starbugs.png">
+        <h5 style="color:white">web design</h5>
+        <p style="color:white">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+    </div>
+    <div class="card ">
+      <div class="card-body " style="background-color: #1a1a1a">
+        <img style="width: 20px" src="C:\Users\temp\Downloads\starbugs.png">
+        <h5 style="color:white">web design</h5>
+        <p style="color:white">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+    </div>  
+    <div class="card "style="background-color: #1a1a1a">
+      <div class="card-body ">
+        <img style="width: 20px" src="C:\Users\temp\Downloads\starbugs.png">
+        <h5 style="color:white">web design</h5>
+        <p style="color:white">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+    </div>
+    <div class="card " style="background-color: #1a1a1a">
+      <div class="card-body ">
+        <img style="width: 20px" src="C:\Users\temp\Downloads\starbugs.png">
+        <h5 style="color:white">web design</h5>
+        <p style="color:white">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div style="background-color: #00b33c">
+  <h3 style="padding-left: 550px; color:white">what we offer</h3><br>
+  <p style="color:white;padding-left: 360px">Look at some of the recent projects we have completed for our valuble clients</p>
+  <div style="display: inline-block; padding-left: 150px">
+    <img style="width: 250px;height: 200px" src="C:\Users\temp\Downloads\fm1.jpg">
+     <pre style="font-size: 20px">      supra 1998</pre>
+  </div >
+  
+  <div style="display: inline-block;padding-left: 150px">
+    <img style="width: 250px;height: 200px" src="C:\Users\temp\Downloads\fm2.jpg">
+      <pre style="font-size: 20px">     supra 1998</pre>    
+  </div>
+
+  <div style="display: inline-block;padding-left: 150px">
+    <img style="width: 250px;height: 200px" src="C:\Users\temp\Downloads\fm3.jpg">
+      <pre style="font-size: 20px">     supra 1998</pre>
+    
+  </div>
+
+</div>
+
+
+
+<div>
+  <div style="display: inline-block; width: 250px;padding-left: 50px">
+    <h5>web design</h5>
+        <p style="font-size: 13px">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  </div>
+  <div style="display: inline-block;padding-left: 500px">
+     <img  style="padding-left: 20px" src="C:\Users\temp\Downloads\starbugs.png" class="float-left" alt="Paris" width="100" height="100">
+      <img style="padding-left: 20px" src="C:\Users\temp\Downloads\insta.jpg" class="float-left" alt="Paris" width="100" height="100">
+       <img style="padding-left: 20px" src="C:\Users\temp\Downloads\reddit.png" class="float-left" alt="Paris" width="100" height="100">
+        <img style="padding-left: 20px"  src="C:\Users\temp\Downloads\face.png" class="float-left" alt="Paris" width="100" height="100">
+    
+  </div>
+</div>
+
+
+
+<div style="background-color: #1a1a1a"><br><br>
+  <div style="display: inline-block;width: 250px;padding-left: 30px">
+     <h6 style="color:white">Adress</h6>
+    <p style="color:white">Address: 1032 Wayback Lane, Wantagh
+        NY 11793
+        Email: support@domain.com
+        Website: www.domain.com
+        Toll Free: 631-409-3105</p>
+    
+  </div>
+
+<div style="display: inline-block;width: 250px;padding-left: 30px">
+     <h6 style="color:white">Adress</h6>
+    <p style="color:white">Address: 1032 Wayback Lane, Wantagh
+        NY 11793
+        Email: support@domain.com
+        Website: www.domain.com
+        Toll Free: 631-409-3105</p>
+    
+  </div>
+
+  <div style="display: inline-block;width: 250px;padding-left: 30px">
+     <h6 style="color:white">Adress</h6>
+    <p style="color:white">Address: 1032 Wayback Lane, Wantagh
+        NY 11793
+        Email: support@domain.com
+        Website: www.domain.com
+        Toll Free: 631-409-3105</p>
+    
+  </div>
+
+  <div style="display: inline-block;width: 400px;padding-left: 30px">
+     <h6 style="color:white">Gallery</h6>
+     <div>
+        <img  style="padding-left: 20px;padding-top: 20px;padding-right: 20px;padding-bottom: 20px" src="C:\Users\temp\Downloads\starbugs.png" class="float-left" alt="Paris" width="100" height="100">
+         <img  style="padding-left: 20px;padding-top: 20px;padding-right: 20px;padding-bottom: 20px" src="C:\Users\temp\Downloads\face.png" class="float-left" alt="Paris" width="100" height="100">
+          <img  style="padding-left: 20px;padding-top: 20px;padding-right: 20px;padding-bottom: 20px" src="C:\Users\temp\Downloads\insta.jpg" class="float-left" alt="Paris" width="100" height="100">
+           <img  style="padding-left: 20px;padding-top: 20px;padding-right: 20px;padding-bottom: 20px" src="C:\Users\temp\Downloads\reddit.png" class="float-left" alt="Paris" width="100" height="100">
+            <img  style="padding-left: 20px;padding-top: 20px;padding-right: 20px;padding-bottom: 20px" src="C:\Users\temp\Downloads\git.jpg" class="float-left" alt="Paris" width="100" height="100">
+             <img  style="padding-left: 20px;padding-top: 20px;padding-right: 20px;padding-bottom: 20px" src="C:\Users\temp\Downloads\lock.jpg" class="float-left" alt="Paris" width="100" height="100">
+
+              <p>llllllll</p>
+              <p>sjjsjjsjsjsj</p>
+              <pre>jdjdjd</pre>
+     </div>
+  </div>
+
+</div>
+<div style="background-color:  #404040">
+  <br>
+  <br>
+  <p style="color:white;font-size: 8px">© Copyright. All Rights Reserved | by ShapeBootstrap</p>
+  <br>
+</div>
+
+
+
+</div>
+</body>
+</html>
