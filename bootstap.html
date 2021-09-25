@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +9,92 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script SRC="jquery-3.5.1.min.js"></script>
   <script type="text/javascript">
   
   function add(){
 
-    
 document.getElementById('form1').style.display = '';
+document.getElementById('form2').style.display ='none';
   }
+   function add1(){
+
+
+document.getElementById('form1').style.display ='none';
+document.getElementById('form2').style.display = '';
+
+  }
+
+$(document).ready(function(){
+
+  $("#pwd1").keydown(function(){
+    var a = document.getElementById("pwd1").value
+    var n=a.length;
+    document.getElementById('passstrength').style.display = '';
+    
+    if(n==0){
+        
+      document.getElementById('bar').style.display = 'none';
+      document.getElementById('bar1').style.display = 'none';
+      document.getElementById('bar2').style.display = 'none';
+      document.getElementById('bar3').style.display = 'none';
+      document.getElementById('bar4').style.display = 'none';
+      document.getElementById("passstrength").style.display = 'none';
+       
+
+    }
+    else if (n>=1 && n<=3 ) {
+
+      document.getElementById('bar').style.display = '';
+      document.getElementById('bar1').style.display = 'none';
+      document.getElementById('bar2').style.display = 'none';
+      document.getElementById('bar3').style.display = 'none';
+      document.getElementById('bar4').style.display = 'none';
+      document.getElementById("passstrength").innerHTML = "Password Strength: Bad shit";
+    }
+     else if (n>=4 && n<=6) {
+
+      document.getElementById('bar1').style.display = '';
+      document.getElementById('bar').style.display = 'none';
+       document.getElementById('bar2').style.display = 'none';
+      document.getElementById('bar3').style.display = 'none';
+      document.getElementById('bar4').style.display = 'none';
+       document.getElementById("passstrength").innerHTML = "Password Strength: not bad dooog";
+  //  block of code to be executed if the condition1 is false and condition2 is true
+    }
+      else if (n>=7 && n<=9) {
+       
+        document.getElementById('bar1').style.display = 'none';
+         document.getElementById('bar').style.display = 'none';
+      document.getElementById('bar2').style.display = '';
+       document.getElementById('bar3').style.display = 'none';
+      document.getElementById('bar4').style.display = 'none';
+       document.getElementById("passstrength").innerHTML = "Password Strength: moderate";
+  //  block of code to be executed if the condition1 is false and condition2 is true
+    }
+     else if (n>=10 && n<=12) {
+       
+       document.getElementById('bar1').style.display = 'none';
+         document.getElementById('bar').style.display = 'none';
+        document.getElementById('bar2').style.display = 'none';
+         document.getElementById('bar3').style.display = '';
+          document.getElementById('bar4').style.display = 'none';
+         document.getElementById("passstrength").innerHTML = "Password Strength:It's ok man";
+  //  block of code to be executed if the condition1 is false and condition2 is true
+    }
+     else {
+      
+       document.getElementById('bar1').style.display = 'none';
+         document.getElementById('bar').style.display = 'none';
+        document.getElementById('bar2').style.display = 'none';
+      document.getElementById('bar3').style.display = 'none';
+      document.getElementById('bar4').style.display = '';
+       document.getElementById("passstrength").innerHTML = "Password Strength: cool";
+  //  block of code to be executed if the condition1 is false and condition2 is false
+     }
+   });
+
+});
 
 </script>
 </head>
@@ -26,10 +106,12 @@ document.getElementById('form1').style.display = '';
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
     <img src="C:\Users\temp\Downloads\starbugs.png" alt="logo" style="width:60px;">
+    <h4 style="display: inline-block;padding-left: 20px;">ABC Hospital</h4>
   </a>
+
   
   <!-- Links -->
-  <ul class="navbar-nav" style="padding-left: 680px">
+  <ul class="navbar-nav" style="padding-left: 510px;padding-right: 0px;">
     <li class="nav-item">
       <a class="nav-link" href="#" style="color: #00ff00">Home</a>
     </li>
@@ -59,7 +141,7 @@ document.getElementById('form1').style.display = '';
       <a class="nav-link" href="#" style="color: #00ff00">Contact</a>
     </li>
     <a class="navbar-brand" href="#">
-    <img onclick="add()" src="C:\Users\temp\Downloads\lock.jpg" alt="logo" style="width:40px;">
+    <img onclick="add()" src="C:\Users\temp\Downloads\downloadlogin.png" alt="logo" style="width:40px;">
   </a>
   </ul>
 </nav>
@@ -70,6 +152,7 @@ document.getElementById('form1').style.display = '';
 
 
 <div  id = "form1" style = "display:none">
+   <div class="alert alert-info">
   <div class="container">
   <h2>Login</h2>
   <form action="/action_page.php" class="was-validated">
@@ -93,10 +176,70 @@ document.getElementById('form1').style.display = '';
       </label>
     </div>
     <button type="submit" class="btn btn-success">Login</button>
+    <button onclick="add1()" type="submit" class="btn btn-success">Sign UP</button>
   </form>
 </div>
-
+</div>
 </div><br><br>
+
+
+<div  id = "form2" style = "display:none">
+   <div class="alert alert-info">
+  <div class="container">
+  <h2>Sign Up</h2>
+  <h4 style="display: inline-block;">Welcome to Starbugs</h4>
+  <img  src="C:\Users\temp\Downloads\starbugs.png" alt="logo" style="width:40px; display: inline-block;padding-left: 10px">
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd1">Password:</label>
+      <input type="password" class="form-control" id="pwd1" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+            <label id="passstrength" style="display: none">password strength:</label>
+            <div id="bar" class="progress"  style="display: none"><br>
+             <div class="progress-bar bg-danger" style="width:20%"></div>
+            </div>
+            <div id="bar1" class="progress" style="display: none">
+              <div class="progress-bar bg-info" style="width:40%"></div>
+            </div>
+
+            <div id="bar2" class="progress" style="display: none">
+            <div class="progress-bar " style="width:60%"></div>
+            </div>
+
+            <div  id="bar3" class="progress border" style="display: none">
+              <div class="progress-bar bg-success" style="width:80%"></div>
+            </div>
+
+            <div  id="bar4" class="progress border" style="display: none">
+              <div class="progress-bar bg-success" style="width:100%"></div>
+            </div>
+    <div class="form-group">
+      <label for="pwd">Retype-Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-success">Sign UP</button>
+    <button onclick="add()" type="submit" class="btn btn-success" style="padding-right: 20px">login</button>
+  </form>
+</div>
+</div>
+</div>
 
 
 
@@ -145,6 +288,96 @@ document.getElementById('form1').style.display = '';
 </div>
 </div>
 <div>
+
+
+<div>
+  <div class="container">
+  <h2></h2>
+  <p></p>
+  <div class="card-deck">
+    <div class="card bg-primary">
+      <div class="card-body text-center">
+       <table class="table" style="width: 300px">
+    <thead class="thead-dark">
+      <tr>
+        <th>Department</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><li>orthology</li></td>
+        
+      </tr>
+      <tr>
+        <td><li>General</li></td>
+      
+       
+      </tr>
+      <tr>
+        <td><li>nerology</li></td>
+        
+      </tr>
+    </tbody>
+  </table>
+      </div>
+    </div>
+    <div class="card bg-warning">
+      <div class="card-body text-center">
+       <table class="table" style="width: 300px">
+    <thead class="thead-dark">
+      <tr>
+        <th>Service</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><li>general and specialty surgical services</li></td>
+        
+      </tr>
+      <tr>
+        <td><li>emergency room services</li></td>
+      
+       
+      </tr>
+      <tr>
+        <td><li>laboratory services</li></td>
+        
+      </tr>
+    </tbody>
+  </table>
+      </div>
+    </div>
+    <div class="card bg-success">
+      <div class="card-body text-center">
+        <table class="table" style="width: 300px">
+    <thead class="thead-dark">
+      <tr>
+        <th>Branch</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><li>chicago</li></td>
+        
+      </tr>
+      <tr>
+        <td><li>los angels</li></td>
+      
+       
+      </tr>
+      <tr>
+        <td><li>New york</li></td>
+        
+      </tr>
+    </tbody>
+  </table>
+      </div>
+    </div>
+    </div>  
+  </div>
+</div>
+</div>
+
   
   <div style="display: inline-block;">
      <br><br>
@@ -231,6 +464,8 @@ document.getElementById('form1').style.display = '';
   </div>
 
 </div>
+
+
 
 
 
